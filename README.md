@@ -1,16 +1,132 @@
-# React + Vite
+# WeatherNow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+WeatherNow is a responsive weather application built with React that provides current weather conditions and a multi-day forecast for cities worldwide. The project integrates the OpenWeather API and focuses on clean UI, responsive design, and user-friendly error handling.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Search weather by city name
+- Current weather conditions
+- Multi-day weather forecast
+- City autocomplete suggestions
+- Temperature unit switching (°C / °F)
+- Responsive layout
+- Loading and error states
+- Weather search by current location
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+- React
+- JavaScript (ES6+)
+- Vite
+- Tailwind CSS
+- OpenWeather API
+- Fetch API
+
+---
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── ErrorMessage
+│   ├── LoadingSpinner
+│   ├── SearchBar
+│   ├── TemperatureToggle
+│   ├── WeatherCard
+│   └── WeatherForecast
+├── hooks/
+│   └── useWeather
+├── services/
+│   └── weatherApi
+├── utils/
+├── assets/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Core Logic
+
+### Main Logic
+
+The application manages weather data through a custom React hook and communicates with the OpenWeather API.
+
+- Fetches current weather data
+- Retrieves weather forecast
+- Searches cities using the Geocoding API
+- Supports geolocation-based weather lookup
+- Handles loading and API error states
+
+---
+
+## Performance Optimizations
+
+- Custom hook for centralized state management
+- Asynchronous API requests using `async/await`
+- Conditional rendering to avoid unnecessary UI updates
+- Component-based architecture for maintainability
+
+---
+
+## UI / UX
+
+- Responsive design for desktop and mobile devices
+- Clean and minimal interface
+- Instant loading feedback
+- Friendly error messages
+- Simple temperature unit switching
+
+---
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Future Improvements
+
+- Hourly weather forecast
+- Recent search history
+- Weather maps integration
+- Multiple language support
+
+---
+
+## Author
+
+**Dmytro**
+
+Frontend Developer (React / TypeScript)
+
+---
+
+## Notes
+
+This project demonstrates working with external REST APIs, asynchronous data fetching, custom React hooks, component-based architecture, responsive UI development, and robust handling of loading and error states.
